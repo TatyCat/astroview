@@ -69,8 +69,9 @@ nav button:hover {
 }
 
 /* Header Section */
-header div {
-  background-image: url(Helix_Campbell_960.jpg);
+.spacePhoto {
+  background-image: url('');
+  background-color: black;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
