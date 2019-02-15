@@ -73,6 +73,7 @@ header div {
   background-image: url(Helix_Campbell_960.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
   background-size: cover;
 }
 
