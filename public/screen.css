@@ -81,7 +81,7 @@ header div p {
   padding: 10rem;
   text-align: center;
   font-size: 2rem;
-  text-shadow: .5px 1px 1px rgb(154, 154, 154);
+  text-shadow: .5px .6px 1px rgb(154, 154, 154);
   color: #ffffff
 }
 
@@ -99,7 +99,10 @@ header div p, #photo-desc, article p, footer {
 /* Main Section */
 main section{
   display: flex;
+  margin: .6rem;
+  justify-content: space-between;
 }
+
 main h2 {
   background-color: rgb(244, 181, 22);
   color: white;
@@ -110,9 +113,41 @@ main h2 {
 
 main section section{
   background-color: #EDEDED;
-  padding: 1rem;
-  margin: 1.5rem;
+  padding: 1.5rem;
   border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 48%;
+}
+
+main section section p{
+  margin-top: .8rem;
+  margin-bottom: 0;
+}
+
+main section section p:nth-child(odd){
+  border-bottom: 1px rgb(145, 145, 145) solid;
+  border-top: 1px rgb(145, 145, 145) solid;
+  padding: .8rem 0;
+}
+
+main section section h4{
+  text-align: center;
+  font-size: 1.2rem;  
+  margin: 0;
+  padding-bottom: .5rem;
+}
+
+article{
+  background-color: #EDEDED;
+  margin: 0;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+article h3{
+  color: rgb(244, 181, 22);
+  text-shadow: .5px .5px 1px rgb(145, 145, 145);
 }
 
 article p, h3 {
@@ -128,7 +163,6 @@ article p, h3 {
 /* Footer Section */
 footer {
   background-color: black;
-  margin-top: 1rem;
   padding: 1rem;
   color: whitesmoke;
 }
