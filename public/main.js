@@ -1,17 +1,26 @@
-let getSpaceImg = () => {
+const getSpaceImg = () => {
+  const photoCopyrightSelector = document.querySelector('#copyright')
+
   fetch('https://sdg-astro-api.herokuapp.com/api/Nasa/apod')
   .then(resp =>{
     return resp.json()
   })
   .then(photoUrl => {
-    let topHeader = document.querySelector('.spacePhoto')
+    const topHeader = document.querySelector('.spacePhoto')
     topHeader.style.backgroundImage = `url(${photoUrl.hdUrl})`
+    
+    document.querySelector('#photo-title').textContent = photoUrl.title
+    if(photoUrl.copyright !== null){
+      photoCopyrightSelector.textContent = photoUrl.copyright
+    }else{
+      photoCopyrightSelector.textContent = "No Copyright"
+    }
   })
 }
 
-const main = () => {
+const mainContent = () => {
   getSpaceImg()
 }
 
-document.addEventListener('DOMContentLoaded', main)
+document.addEventListener('DOMContentLoaded', mainContent)
 
