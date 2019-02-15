@@ -14,67 +14,69 @@ body {
 
 /* !custom! - Tatyanna */
 /* Navigation Bar */
-nav{
+nav {
   background-color: black;
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-nav h1{
-  margin-left: 1rem;
+nav h1 {
+  margin-left: .5rem;
 }
-nav h1 a:link{
+
+nav h1 a:link {
   text-decoration: none;
   font-size: 2.5rem;
 }
 
-nav a:link{
+nav a:link {
   color: white;
-} 
-
-nav section{
-  display: flex;
-  align-items: center;
-  margin-right: 2rem;
 }
 
-nav section a{
-  margin: 0rem;
+nav section {
+  display: flex;
+  align-items: center;
+}
+
+nav section a {
+  margin: 0;
   font-size: .9rem;
   letter-spacing: 1.3px;
   text-decoration: none;
-  border-bottom: 2.9px rgb(65, 65, 65) dashed;
-
+  border-bottom: 3px rgb(65, 65, 65) dashed;
 }
-nav a:visited{
+
+nav a:visited {
   color: whitesmoke;
 }
 
-nav button{
-  border:none;
-  padding: .5rem;
-  margin: 0 1rem;
-  background-color:inherit;
+nav button {
+  border: none;
+  padding: .5rem 1.7rem;
+  margin: 0 .5rem;
+  background-color: inherit;
   color: whitesmoke;
-  cursor:pointer;
-  white-space:nowrap;
-}
-nav button:hover{
-  background-color: rebeccapurple;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 100%;
 }
 
+nav button:hover {
+  background-color: goldenrod;
+}
 
 /* Header Section */
-header div{
+header div {
   background-image: url(Helix_Campbell_960.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-header div p{
+header div p {
   margin: 0;
   padding: 10rem;
   text-align: center;
@@ -83,7 +85,58 @@ header div p{
   color: #ffffff
 }
 
-header div p, #photo-desc,
-article p, footer{
+header div p, #photo-desc, article p, footer {
   text-align: center;
+}
+
+#photo-desc {
+  background-color: rgb(21, 21, 21);
+  color: whitesmoke;
+  padding: .4rem;
+  margin: 0;
+}
+
+/* Main Section */
+main section{
+  display: flex;
+}
+main h2 {
+  background-color: rgb(244, 181, 22);
+  color: white;
+  padding: 1rem .5rem;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+main section section{
+  background-color: #EDEDED;
+  padding: 1rem;
+  margin: 1.5rem;
+  border-radius: .5rem;
+}
+
+article p, h3 {
+  text-align: center;
+  margin: 1rem 20vw;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer Section */
+footer {
+  background-color: black;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: whitesmoke;
+}
+
+footer a:link, footer a:visited {
+  color: whitesmoke;
+}
+
+.fa-heartbeat {
+  color: rgba(244, 181, 22, 0.769);
 }
