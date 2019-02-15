@@ -74,14 +74,16 @@ nav button:hover {
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
   background-size: cover;
+}
+
+header{
+  overflow: hidden;
 }
 
 header div p {
   margin: 0;
-  padding: 10rem;
-  text-align: center;
+  padding: 10rem; /* padding: 19vh; */
   font-size: 2rem;
   text-shadow: .5px .6px 1px rgb(154, 154, 154);
   color: #ffffff
@@ -196,6 +198,35 @@ footer a:link, footer a:visited {
 }
 
 .fa-heartbeat {
-  /* color: rgba(244, 181, 22, 0.769); */
   color: grey;
+}
+
+/* Media */
+@media(max-width: 560px){
+
+  header div p{
+    padding: 10rem 0;
+  }
+
+  body nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body nav h1 a{
+    font-size: calc(5vw + 2vh) !important;
+    white-space: nowrap;
+    text-shadow: .5px .6px 1px rgb(193, 193, 193);
+  }
+
+  nav section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav button:hover {
+    width: 100%;
+  }
 }
