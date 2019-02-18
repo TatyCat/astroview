@@ -1,0 +1,26 @@
+astroworld js spaceInfo carousel 
+
+Problem:
+  Input: 
+  button click to the left 
+  button click to the right
+  Output: 
+  missionData[i]
+
+  missionsSelector.textContent = missionData[i].mission_name
+  launchLocationSelector.textContent = missionData[i].launch_site.site_name_long
+
+  if(missionData.details !== null){
+    missionDetailSelector.textContent = "No description available yet."
+  }else{
+    missionDetailSelector.textContent = missionData[i].details
+  }
+
+  countdownSelector.textContent = missionData[i].launch_date_utc
+
+Examples:
+Data Structure:
+for loop 
+Algorithm:
+.lenth of array of objs
+Code with Intent:

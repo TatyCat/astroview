@@ -121,13 +121,17 @@ main section section{
   border-radius: .5rem;
   display: flex;
   flex-direction: column;
-  max-width: 48%;
+  max-width: 60%;
   margin: 2rem;
 }
 
 main section section p{
   margin-top: .8rem;
   margin-bottom: 0;
+}
+
+main section section p span{
+  padding-left: .2rem;
 }
 
 main section section p:nth-child(odd){
@@ -203,7 +207,6 @@ footer a:link, footer a:visited {
 
 /* Media */
 @media(max-width: 560px){
-
   header div p{
     padding: 10rem 0;
   }

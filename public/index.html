@@ -21,20 +21,35 @@
       <div class="spacePhoto">
         <p>Explore your universe</p>
       </div>
-      <p id="photo-desc">copyright: <span id="copyright"></span> | title: <span id="photo-title"></span></p>
+      <p id="photo-desc">copyright: <span id="copyright"></span> | title: <span id="photo-title">Loading...</span></p>
     </header>
 
     <main>
       <h2>Upcoming SpaceX Launches</h2>
       <section>
-        <button><i class="fas fa-chevron-left"></i></button>
+        <button id="left-button"><i class="fas fa-chevron-left"></i></button>
         <section>
-          <h4><i class="fas fa-space-shuttle"></i> Satu (PSN-6) / GTO-1 / BerText</h4>
-          <p><i class="fas fa-info-circle"></i> No description available yet.</p>
-          <p><i class="far fa-clock"></i> 7 days, 7 hours, 13 mins, 29 seconds</p>
-          <p><i class="fas fa-map-marked-alt"></i> Cape Canaveral Air Force Station Space Launch Complex 40</p>
+          <h4>
+            <i class="fas fa-space-shuttle"></i>
+            <span id="mission-data"> Loading...</span>
+          </h4>
+
+          <p>
+            <i class="fas fa-info-circle"></i>
+            <span id="flight-desc"> </span>
+          </p>
+
+          <p>
+            <i class="far fa-clock"></i> 
+            <span id="launch-count-down-section"></span>
+          </p>
+
+          <p>
+            <i class="fas fa-map-marked-alt"></i> 
+            <span id="takeoff-site"> </span>
+          </p>
         </section>      
-        <button><i class="fas fa-chevron-right"></i></button> 
+        <button id="right-button"><i class="fas fa-chevron-right"></i></button> 
       </section>
 
         <article>
