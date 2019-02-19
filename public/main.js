@@ -24,7 +24,7 @@ const getSpaceImg = () => {
     }
   })
 }
-
+// TODO: negative numbers!
 
 //API call for SpaceX launches
 getSpaceXlaunchData = () => {
@@ -35,7 +35,7 @@ getSpaceXlaunchData = () => {
   .then(missionData => {
     createLaunchDataObj(missionData)
 
-    // console.log(missionData[0])
+    console.log(missionData)
     missionsSelector.textContent = missionData[0].mission_name
     launchLocationSelector.textContent = missionData[0].launch_site.site_name_long
 
@@ -67,23 +67,29 @@ const createLaunchDataObj = (missionData) =>{
 
 
 const postClickfillInLaunchData = (click) =>{
-  // console.log(missionDataObj["_0"].site)
 
-  // missionsSelector.textContent = missionDataObj._4.mission
-  // launchLocationSelector.textContent = missionDataObj._4.site
-  // if(missionDataObj._4.details !== null){
-  //   missionDetailSelector.textContent = missionDataObj._4.details
-  // }else{
-  //   missionDetailSelector.textContent = "No description available yet."
-  // }
+  console.log(click)
+  missionsSelector.textContent = missionDataObj[`_${click}`].mission
+  launchLocationSelector.textContent = missionDataObj[`_${click}`].site
+
+  if(missionDataObj[`_${click}`].details !== null){
+    missionDetailSelector.textContent = missionDataObj[`_${click}`].details
+  }else{
+    missionDetailSelector.textContent = "No description available yet."
+  }
 }
 
 //Button Click for Launch Carousel 
 const buttonForNextLaunch = (buttonPress) => {
+  
   if (buttonPress === "forward"){
     click++
   }else if (buttonPress === "back"){
-    click-- 
+    if (click>=0){
+      click-- 
+    }else{
+
+    }
   }
   //call data to fill in the carousel section
   postClickfillInLaunchData(click)
